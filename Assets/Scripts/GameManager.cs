@@ -1,21 +1,25 @@
-
 using UnityEngine;
-using UnityEngine.UI;
-
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject cropPrefab; 
-    public Text scoreText;        
+    public TextMeshProUGUI scoreText; 
 
     private int score = 0;
     private bool gameOver = false;
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddScore()
