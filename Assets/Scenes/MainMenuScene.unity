@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d92f3d5335e99469924dca3a7c8177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: FarmingMinigame
   scaleFactor: 1.2
 --- !u!114 &531292327
 MonoBehaviour:
