@@ -1,61 +1,100 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+
 
 public class CropController : MonoBehaviour
 {
-    [Header("Timing Settings")]
-    public float timeToWither = 10f;    
-    public float harvestDelay = 3f;     
+    [Header("Timings")]
+    public float waterDelay = 3f;   
+    public float harvestDelay = 3f; 
 
     [HideInInspector]
-    public CropTile tile;               
+    public CropTile tile;           
 
-    private float timer = 0f;
+    
+    public Image progressBar;
+
     private bool isWatered = false;
     private bool isHarvesting = false;
 
-    
+   
     public bool CanBeHarvested
     {
         get { return isWatered && !isHarvesting; }
     }
 
-    void Update()
+    void Start()
     {
-       
-        if (isWatered && !isHarvesting)
+        if (progressBar != null)
         {
-            timer += Time.deltaTime;
-            if (timer >= timeToWither)
-            {
-                
-                GameManager.Instance.GameOver();
-               
-            }
+            progressBar.fillAmount = 0f;
+            progressBar.gameObject.SetActive(false);
         }
     }
 
     
-    public void Water()
+    public void StartWatering()
     {
-        isWatered = true;
-        timer = 0f;  
+        if (!isWatered)
+        {
+            StartCoroutine(WateringRoutine());
+        }
     }
 
-    
+    IEnumerator WateringRoutine()
+    {
+        if (progressBar != null)
+        {
+            progressBar.gameObject.SetActive(true);
+        }
+
+        float timer = 0f;
+        while (timer < waterDelay)
+        {
+            timer += Time.deltaTime;
+            if (progressBar != null)
+                progressBar.fillAmount = timer / waterDelay;
+            yield return null;
+        }
+
+        isWatered = true;
+
+        
+        if (progressBar != null)
+        {
+            progressBar.gameObject.SetActive(false);
+            progressBar.fillAmount = 0f;
+        }
+    }
+
     public void StartHarvest()
     {
         if (CanBeHarvested)
         {
-            isHarvesting = true;
             StartCoroutine(HarvestRoutine());
         }
     }
 
-   
     IEnumerator HarvestRoutine()
     {
-        yield return new WaitForSeconds(harvestDelay);
+        isHarvesting = true;
+
+        if (progressBar != null)
+        {
+            progressBar.gameObject.SetActive(true);
+        }
+
+        float timer = 0f;
+        while (timer < harvestDelay)
+        {
+            timer += Time.deltaTime;
+            if (progressBar != null)
+                progressBar.fillAmount = timer / harvestDelay;
+            yield return null;
+        }
+
+       
         GameManager.Instance.AddScore();
         tile.RemoveCrop();
         Destroy(gameObject);

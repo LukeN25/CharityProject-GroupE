@@ -10,12 +10,13 @@ public class CropTile : MonoBehaviour
     {
         if (!isOccupied)
         {
-            
+           
             GameObject cropObj = Instantiate(GameManager.Instance.cropPrefab, transform.position, Quaternion.identity);
             currentCrop = cropObj.GetComponent<CropController>();
             currentCrop.tile = this;
             isOccupied = true;
-            currentCrop.Water(); 
+           
+            currentCrop.StartWatering();
         }
     }
 
@@ -24,7 +25,7 @@ public class CropTile : MonoBehaviour
     {
         if (isOccupied && currentCrop != null && currentCrop.CanBeHarvested)
         {
-            currentCrop.StartHarvest(); 
+            currentCrop.StartHarvest();
         }
     }
 
