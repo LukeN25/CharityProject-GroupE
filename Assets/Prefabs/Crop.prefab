@@ -104,6 +104,9 @@ MonoBehaviour:
   waterDelay: 3
   harvestDelay: 3
   tile: {fileID: 0}
+  seedType: 1
+  potatoSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  tomatoSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   progressBar: {fileID: 1533275209815257764}
 --- !u!1 &8846740632278501140
 GameObject:

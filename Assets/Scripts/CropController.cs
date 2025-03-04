@@ -4,63 +4,52 @@ using System.Collections;
 public class CropController : MonoBehaviour
 {
     [Header("Timings")]
-    public float growthTime = 3f; 
-    public float waterDelay = 3f;  
-    public float harvestDelay = 3f; 
+    public float waterDelay = 3f;    
+    public float harvestDelay = 3f;  
 
     [HideInInspector]
-    public CropTile tile; 
+    public CropTile tile;  
 
-    public Transform progressBar; 
+    
+    public ToolManager.SeedType seedType;
+
+    [Header("Crop Appearance")]
+    public Sprite potatoSprite;  
+    public Sprite tomatoSprite;  
+
+    
+    public Transform progressBar;
+
     private bool isWatered = false;
     private bool isHarvesting = false;
-    private bool isGrowing = false;
 
-    public bool CanBeHarvested
-    {
-        get { return isWatered && !isHarvesting && !isGrowing; }
-    }
+    public bool CanBeHarvested { get { return isWatered && !isHarvesting; } }
 
     void Start()
     {
         if (progressBar != null)
         {
-            progressBar.localScale = new Vector3(0f, 1f, 1f); 
+            progressBar.localScale = new Vector3(0f, 1f, 1f);
             progressBar.gameObject.SetActive(false);
         }
-
-        
-        StartCoroutine(GrowthRoutine());
     }
 
-    IEnumerator GrowthRoutine()
+    
+    public void UpdateCropAppearance()
     {
-        isGrowing = true;
-        if (progressBar != null)
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
         {
-            progressBar.gameObject.SetActive(true);
-        }
-
-        float timer = 0f;
-        while (timer < growthTime)
-        {
-            timer += Time.deltaTime;
-            if (progressBar != null)
-                progressBar.localScale = new Vector3(timer / growthTime, 1f, 1f);
-            yield return null;
-        }
-
-        isGrowing = false;
-        if (progressBar != null)
-        {
-            progressBar.gameObject.SetActive(false);
-            progressBar.localScale = new Vector3(0f, 1f, 1f); 
+            if (seedType == ToolManager.SeedType.Potato)
+                sr.sprite = potatoSprite;
+            else if (seedType == ToolManager.SeedType.Tomato)
+                sr.sprite = tomatoSprite;
         }
     }
 
     public void StartWatering()
     {
-        if (!isWatered && !isGrowing)
+        if (!isWatered)
         {
             StartCoroutine(WateringRoutine());
         }
@@ -69,9 +58,7 @@ public class CropController : MonoBehaviour
     IEnumerator WateringRoutine()
     {
         if (progressBar != null)
-        {
             progressBar.gameObject.SetActive(true);
-        }
 
         float timer = 0f;
         while (timer < waterDelay)
@@ -83,7 +70,6 @@ public class CropController : MonoBehaviour
         }
 
         isWatered = true;
-
         if (progressBar != null)
         {
             progressBar.gameObject.SetActive(false);
@@ -102,11 +88,8 @@ public class CropController : MonoBehaviour
     IEnumerator HarvestRoutine()
     {
         isHarvesting = true;
-
         if (progressBar != null)
-        {
             progressBar.gameObject.SetActive(true);
-        }
 
         float timer = 0f;
         while (timer < harvestDelay)
@@ -117,6 +100,7 @@ public class CropController : MonoBehaviour
             yield return null;
         }
 
+       
         GameManager.Instance.AddScore();
         tile.RemoveCrop();
         Destroy(gameObject);
