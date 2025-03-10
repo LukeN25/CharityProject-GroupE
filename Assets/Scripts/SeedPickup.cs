@@ -4,10 +4,9 @@ using System.Collections;
 
 public class SeedPickup : MonoBehaviour
 {
-    
-    public ToolManager.SeedType seedType;
    
-    public float respawnTime = 10f;
+    public ToolManager.SeedType seedType;
+    public float respawnTime = 10f; 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,7 +25,6 @@ public class SeedPickup : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        
         gameObject.SetActive(false);
         yield return new WaitForSeconds(respawnTime);
         gameObject.SetActive(true);

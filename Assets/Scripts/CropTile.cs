@@ -7,7 +7,6 @@ public class CropTile : MonoBehaviour
     public CropController currentCrop; 
     public GameObject cropPrefab;      
 
-    
     public void PlantCrop()
     {
         if (isOccupied)
@@ -31,11 +30,12 @@ public class CropTile : MonoBehaviour
 
             if (cropCtrl != null)
             {
-               
+                
+                cropCtrl.tile = this;
                 cropCtrl.seedType = ToolManager.Instance.heldSeed;
-               
                 cropCtrl.UpdateCropAppearance();
-               
+
+                
                 ToolManager.Instance.heldSeed = ToolManager.SeedType.None;
                 isOccupied = true;
                 currentCrop = cropCtrl;
@@ -43,7 +43,7 @@ public class CropTile : MonoBehaviour
             }
             else
             {
-                Debug.LogError("CropTile: The cropPrefab does not have a CropController.");
+                Debug.LogError("CropTile: The cropPrefab does not have a CropController component.");
             }
         }
         else

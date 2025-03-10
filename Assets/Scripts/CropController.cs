@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class CropController : MonoBehaviour
 {
     [Header("Timings")]
@@ -10,12 +11,11 @@ public class CropController : MonoBehaviour
     [HideInInspector]
     public CropTile tile;  
 
-    
-    public ToolManager.SeedType seedType;
+    public ToolManager.SeedType seedType;  
 
     [Header("Crop Appearance")]
     public Sprite potatoSprite;  
-    public Sprite tomatoSprite;  
+    public Sprite tomatoSprite; 
 
     
     public Transform progressBar;
@@ -29,12 +29,12 @@ public class CropController : MonoBehaviour
     {
         if (progressBar != null)
         {
+            
             progressBar.localScale = new Vector3(0f, 1f, 1f);
             progressBar.gameObject.SetActive(false);
         }
     }
 
-    
     public void UpdateCropAppearance()
     {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
@@ -100,9 +100,36 @@ public class CropController : MonoBehaviour
             yield return null;
         }
 
+        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore();
+        }
+        else
+        {
+            Debug.LogWarning("HarvestRoutine: GameManager.Instance is null.");
+        }
+
+        
+        if (TaskManager.Instance != null)
+        {
+            TaskManager.Instance.DeliverCrop(seedType);
+        }
+        else
+        {
+            Debug.LogWarning("HarvestRoutine: TaskManager.Instance is null.");
+        }
+
        
-        GameManager.Instance.AddScore();
-        tile.RemoveCrop();
+        if (tile != null)
+        {
+            tile.RemoveCrop();
+        }
+        else
+        {
+            Debug.LogWarning("HarvestRoutine: tile reference is null.");
+        }
+
         Destroy(gameObject);
     }
 }

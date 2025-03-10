@@ -602,7 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   currentCrop: {fileID: 0}
-  cropPrefab: {fileID: 0}
+  cropPrefab: {fileID: 6003680952135442734, guid: aef9167420f15054f9547aeb1ac93b62, type: 3}
 --- !u!212 &468539016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1718,8 +1718,8 @@ Transform:
   m_GameObject: {fileID: 1252820016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: -3.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 317, y: 150, z: 0}
+  m_LocalScale: {x: 13.78, y: 20.89, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2022,7 +2022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf9bd0f7a4a6944ca0e7541ebb443a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropPrefab: {fileID: 6003680952135442734, guid: aef9167420f15054f9547aeb1ac93b62, type: 3}
   scoreText: {fileID: 1943792472}
 --- !u!4 &1658860279
 Transform:

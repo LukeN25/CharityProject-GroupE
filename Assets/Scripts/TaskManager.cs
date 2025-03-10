@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
-    public static TaskManager Instance; 
+    public static TaskManager Instance;
 
     [Header("Task Requirements")]
     public int requiredPotatoes;
@@ -28,9 +28,9 @@ public class TaskManager : MonoBehaviour
         GenerateNewTask();
     }
 
+   
     void GenerateNewTask()
     {
-        
         requiredPotatoes = UnityEngine.Random.Range(1, 4);
         requiredTomatoes = UnityEngine.Random.Range(1, 4);
         collectedPotatoes = 0;
@@ -38,12 +38,19 @@ public class TaskManager : MonoBehaviour
         Debug.Log($"New Task: Bring {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
     }
 
+   
     public void DeliverCrop(ToolManager.SeedType cropType)
     {
         if (cropType == ToolManager.SeedType.Potato)
+        {
             collectedPotatoes++;
-        if (cropType == ToolManager.SeedType.Tomato)
+            Debug.Log("Delivered a Potato. Total: " + collectedPotatoes);
+        }
+        else if (cropType == ToolManager.SeedType.Tomato)
+        {
             collectedTomatoes++;
+            Debug.Log("Delivered a Tomato. Total: " + collectedTomatoes);
+        }
 
         CheckTaskCompletion();
     }

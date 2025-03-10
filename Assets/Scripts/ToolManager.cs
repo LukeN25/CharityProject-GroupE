@@ -11,7 +11,7 @@ public class ToolManager : MonoBehaviour
     public ToolType currentTool = ToolType.None;
     public SeedType heldSeed = SeedType.None;
 
-    private void Awake()
+    void Awake()
     {
         if (Instance == null)
             Instance = this;
@@ -21,7 +21,7 @@ public class ToolManager : MonoBehaviour
 
     void Update()
     {
-        
+       
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             currentTool = ToolType.WateringCan;
