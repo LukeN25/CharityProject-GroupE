@@ -2,58 +2,40 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
+    public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    
-    private CropTile currentTile;
-
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        
-        if (Input.GetKeyDown(KeyCode.E) && currentTile != null)
-        {
-            if (ToolManager.Instance.currentTool == ToolManager.ToolType.Seeds)
-            {
-                currentTile.PlantCrop();
-            }
-            else if (ToolManager.Instance.currentTool == ToolManager.ToolType.WateringCan)
-            {
-                currentTile.WaterTile();
-            }
-            else if (ToolManager.Instance.currentTool == ToolManager.ToolType.Shovel)
-            {
-                currentTile.ShovelCrop();
-            }
-        }
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+        rb.linearVelocity = movement * moveSpeed;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        CropTile tile = other.GetComponent<CropTile>();
-        if (tile != null)
-            currentTile = tile;
-    }
+        if (other.CompareTag("CropTile"))
+        {
+            CropTile tile = other.GetComponent<CropTile>();
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        CropTile tile = other.GetComponent<CropTile>();
-        if (tile != null && tile == currentTile)
-            currentTile = null;
+            if (tile != null)
+            {
+                ToolManager.ToolType currentTool = ToolManager.Instance.GetCurrentTool();
+
+                if (currentTool == ToolManager.ToolType.Seed) tile.Interact();
+                if (currentTool == ToolManager.ToolType.WateringCan) tile.Interact();
+                if (currentTool == ToolManager.ToolType.Shovel) tile.Interact();
+            }
+        }
     }
 }

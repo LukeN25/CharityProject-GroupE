@@ -1,135 +1,43 @@
-﻿using UnityEngine;
-using System.Collections;
-
+﻿
+using UnityEngine;
 
 public class CropController : MonoBehaviour
 {
-    [Header("Timings")]
-    public float waterDelay = 3f;    
-    public float harvestDelay = 3f;  
-
-    [HideInInspector]
-    public CropTile tile;  
-
-    public ToolManager.SeedType seedType;  
-
-    [Header("Crop Appearance")]
-    public Sprite potatoSprite;  
-    public Sprite tomatoSprite; 
-
-    
-    public Transform progressBar;
-
+    public ToolManager.SeedType seedType;
+    private bool isPlanted = false;
     private bool isWatered = false;
-    private bool isHarvesting = false;
+    private bool isReadyToHarvest = false;
 
-    public bool CanBeHarvested { get { return isWatered && !isHarvesting; } }
+    public bool CanPlantSeed() => !isPlanted;
+    public bool CanBeWatered => isPlanted && !isWatered;
+    public bool CanBeHarvested => isReadyToHarvest;
 
-    void Start()
+    public void PlantSeed(ToolManager.SeedType newSeed)
     {
-        if (progressBar != null)
+        if (!isPlanted)
         {
-            
-            progressBar.localScale = new Vector3(0f, 1f, 1f);
-            progressBar.gameObject.SetActive(false);
+            isPlanted = true;
+            seedType = newSeed;
+            Debug.Log($"Planted {seedType} seed.");
         }
     }
 
-    public void UpdateCropAppearance()
+    public void WaterCrop()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
+        if (isPlanted && !isWatered)
         {
-            if (seedType == ToolManager.SeedType.Potato)
-                sr.sprite = potatoSprite;
-            else if (seedType == ToolManager.SeedType.Tomato)
-                sr.sprite = tomatoSprite;
+            isWatered = true;
+            isReadyToHarvest = true;
+            Debug.Log($"Watered {seedType} crop.");
         }
     }
 
-    public void StartWatering()
+    public void HarvestCrop()
     {
-        if (!isWatered)
+        if (isReadyToHarvest)
         {
-            StartCoroutine(WateringRoutine());
+            Debug.Log($"Harvested {seedType} crop.");
+            Destroy(gameObject);
         }
-    }
-
-    IEnumerator WateringRoutine()
-    {
-        if (progressBar != null)
-            progressBar.gameObject.SetActive(true);
-
-        float timer = 0f;
-        while (timer < waterDelay)
-        {
-            timer += Time.deltaTime;
-            if (progressBar != null)
-                progressBar.localScale = new Vector3(timer / waterDelay, 1f, 1f);
-            yield return null;
-        }
-
-        isWatered = true;
-        if (progressBar != null)
-        {
-            progressBar.gameObject.SetActive(false);
-            progressBar.localScale = new Vector3(0f, 1f, 1f);
-        }
-    }
-
-    public void StartHarvest()
-    {
-        if (CanBeHarvested)
-        {
-            StartCoroutine(HarvestRoutine());
-        }
-    }
-
-    IEnumerator HarvestRoutine()
-    {
-        isHarvesting = true;
-        if (progressBar != null)
-            progressBar.gameObject.SetActive(true);
-
-        float timer = 0f;
-        while (timer < harvestDelay)
-        {
-            timer += Time.deltaTime;
-            if (progressBar != null)
-                progressBar.localScale = new Vector3(timer / harvestDelay, 1f, 1f);
-            yield return null;
-        }
-
-        
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.AddScore();
-        }
-        else
-        {
-            Debug.LogWarning("HarvestRoutine: GameManager.Instance is null.");
-        }
-
-        
-        if (TaskManager.Instance != null)
-        {
-            TaskManager.Instance.DeliverCrop(seedType);
-        }
-        else
-        {
-            Debug.LogWarning("HarvestRoutine: TaskManager.Instance is null.");
-        }
-
-       
-        if (tile != null)
-        {
-            tile.RemoveCrop();
-        }
-        else
-        {
-            Debug.LogWarning("HarvestRoutine: tile reference is null.");
-        }
-
-        Destroy(gameObject);
     }
 }

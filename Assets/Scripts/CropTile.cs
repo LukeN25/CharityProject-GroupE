@@ -1,78 +1,32 @@
-
 using UnityEngine;
 
 public class CropTile : MonoBehaviour
 {
-    public bool isOccupied = false;
-    public CropController currentCrop; 
-    public GameObject cropPrefab;      
+    private CropController crop;
 
-    public void PlantCrop()
+    void Start()
     {
-        if (isOccupied)
-        {
-            Debug.Log("CropTile: Tile is already occupied.");
-            return;
-        }
-
-        if (ToolManager.Instance == null)
-        {
-            Debug.LogWarning("CropTile: ToolManager.Instance is null.");
-            return;
-        }
-
-        if (ToolManager.Instance.currentTool == ToolManager.ToolType.Seeds &&
-            ToolManager.Instance.heldSeed != ToolManager.SeedType.None)
-        {
-            
-            GameObject cropObj = Instantiate(cropPrefab, transform.position, Quaternion.identity);
-            CropController cropCtrl = cropObj.GetComponent<CropController>();
-
-            if (cropCtrl != null)
-            {
-                
-                cropCtrl.tile = this;
-                cropCtrl.seedType = ToolManager.Instance.heldSeed;
-                cropCtrl.UpdateCropAppearance();
-
-                
-                ToolManager.Instance.heldSeed = ToolManager.SeedType.None;
-                isOccupied = true;
-                currentCrop = cropCtrl;
-                Debug.Log("CropTile: Planted crop with seed: " + cropCtrl.seedType);
-            }
-            else
-            {
-                Debug.LogError("CropTile: The cropPrefab does not have a CropController component.");
-            }
-        }
-        else
-        {
-            Debug.Log("CropTile: Cannot plant crop. Either tool is not Seeds or no seed is held.");
-        }
+        crop = GetComponentInChildren<CropController>();
     }
 
-    public void WaterTile()
+    public void Interact()
     {
-        if (isOccupied && currentCrop != null)
-        {
-            currentCrop.StartWatering();
-            Debug.Log("CropTile: Watering crop.");
-        }
-    }
+        if (crop == null) return;
 
-    public void ShovelCrop()
-    {
-        if (isOccupied && currentCrop != null && currentCrop.CanBeHarvested)
-        {
-            currentCrop.StartHarvest();
-            Debug.Log("CropTile: Harvesting crop.");
-        }
-    }
+        ToolManager.ToolType currentTool = ToolManager.Instance.GetCurrentTool();
+        ToolManager.SeedType currentSeed = ToolManager.Instance.GetCurrentSeed();
 
-    public void RemoveCrop()
-    {
-        isOccupied = false;
-        currentCrop = null;
+        if (currentTool == ToolManager.ToolType.Seed && crop.CanPlantSeed())
+        {
+            crop.PlantSeed(currentSeed);
+        }
+        else if (currentTool == ToolManager.ToolType.WateringCan && crop.CanBeWatered)
+        {
+            crop.WaterCrop();
+        }
+        else if (currentTool == ToolManager.ToolType.Shovel && crop.CanBeHarvested)
+        {
+            crop.HarvestCrop();
+        }
     }
 }

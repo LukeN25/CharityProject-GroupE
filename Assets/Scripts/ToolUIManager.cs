@@ -4,46 +4,27 @@ using UnityEngine.UI;
 
 public class ToolUIManager : MonoBehaviour
 {
-    [Header("Tool Slot UI Images")]
-    public Image wateringCanSlot;
-    public Image shovelSlot;
-    public Image seedSlot; 
-
-    [Header("Seed Slot Icons")]
-    public Sprite defaultSeedIcon;   
-    public Sprite potatoSeedIcon;    
-    public Sprite tomatoSeedIcon;    
-
-    [Header("Highlight Colors")]
-    public Color highlightedColor = Color.yellow;
-    public Color normalColor = Color.white;
+    public Image wateringCanIcon;
+    public Image shovelIcon;
+    public Image seedIcon;
+    public Color highlightColor = Color.yellow;
+    public Color defaultColor = Color.white;
 
     void Update()
     {
-        if (ToolManager.Instance == null)
-            return;
+        UpdateUI();
+    }
 
-       
-        ToolManager.ToolType currentTool = ToolManager.Instance.currentTool;
+    private void UpdateUI()
+    {
+        wateringCanIcon.color = defaultColor;
+        shovelIcon.color = defaultColor;
+        seedIcon.color = defaultColor;
 
-        
-        wateringCanSlot.color = (currentTool == ToolManager.ToolType.WateringCan) ? highlightedColor : normalColor;
-        shovelSlot.color = (currentTool == ToolManager.ToolType.Shovel) ? highlightedColor : normalColor;
-        seedSlot.color = (currentTool == ToolManager.ToolType.Seeds) ? highlightedColor : normalColor;
+        ToolManager.ToolType currentTool = ToolManager.Instance.GetCurrentTool();
 
-        
-        ToolManager.SeedType heldSeed = ToolManager.Instance.heldSeed;
-        switch (heldSeed)
-        {
-            case ToolManager.SeedType.Potato:
-                seedSlot.sprite = potatoSeedIcon;
-                break;
-            case ToolManager.SeedType.Tomato:
-                seedSlot.sprite = tomatoSeedIcon;
-                break;
-            default:
-                seedSlot.sprite = defaultSeedIcon;
-                break;
-        }
+        if (currentTool == ToolManager.ToolType.WateringCan) wateringCanIcon.color = highlightColor;
+        if (currentTool == ToolManager.ToolType.Shovel) shovelIcon.color = highlightColor;
+        if (currentTool == ToolManager.ToolType.Seed) seedIcon.color = highlightColor;
     }
 }
