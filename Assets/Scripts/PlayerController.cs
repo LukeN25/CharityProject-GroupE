@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
 
     
-    private CropTile currentTile;            
-    private CropController currentPickupCrop; 
-    private DeliveryBasket currentBasket;     
+    public SeedType currentSeed = SeedType.None;   
+    public CropController heldCrop;                  
 
     
-    public CropController heldCrop;
+    private CropTile currentTile;        
+    private CropController currentCrop;  
+    private DeliveryTable currentDeliveryTable;  
 
     void Start()
     {
@@ -26,29 +27,38 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-       
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
-          
-            if (currentBasket != null && heldCrop != null)
+            
+            if (currentDeliveryTable != null && heldCrop != null)
             {
-                currentBasket.DeliverCrop(heldCrop);
+                currentDeliveryTable.DeliverCrop(heldCrop);
                 heldCrop = null;
             }
-           
-            else if (currentPickupCrop != null && heldCrop == null)
+            
+            
+            
+            else if (currentCrop != null)
             {
-                PickUpCrop(currentPickupCrop);
-                currentPickupCrop = null;
+                if (currentCrop.state == CropController.CropState.Growing)
+                {
+                    currentCrop.MashCrop();
+                }
+                else if (currentCrop.state == CropController.CropState.Finished && heldCrop == null)
+                {
+                    PickUpCrop(currentCrop);
+                }
             }
-           
-            else if (currentTile != null)
+            
+            else if (currentTile != null && currentSeed != SeedType.None)
             {
-                currentTile.PlantCrop();
+                currentTile.PlantCrop(currentSeed);
+                currentSeed = SeedType.None;
             }
             else
             {
-                Debug.Log("PlayerController: No interactable object available.");
+                Debug.Log("Player: No interactable object.");
             }
         }
     }
@@ -58,39 +68,45 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = movement * moveSpeed;
     }
 
+    public void PickUpSeed(SeedType seed)
+    {
+        currentSeed = seed;
+        Debug.Log("Player: Picked up seed: " + seed);
+    }
+
     private void PickUpCrop(CropController crop)
     {
         heldCrop = crop;
        
         crop.transform.SetParent(transform);
         crop.transform.localPosition = new Vector3(0, 1, 0); 
-        Debug.Log("PlayerController: Picked up " + crop.seedType + " crop for delivery.");
+        Debug.Log("Player: Picked up finished crop: " + crop.seedType);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+       
         CropTile tile = other.GetComponent<CropTile>();
         if (tile != null)
         {
             currentTile = tile;
-            Debug.Log("PlayerController: Entered CropTile " + tile.gameObject.name);
+            Debug.Log("Player: Entered CropTile " + tile.gameObject.name);
         }
 
         
         CropController crop = other.GetComponent<CropController>();
-        if (crop != null && crop.state == CropController.CropState.Harvested)
+        if (crop != null)
         {
-            currentPickupCrop = crop;
-            Debug.Log("PlayerController: Found harvested crop " + crop.seedType);
+            currentCrop = crop;
+            Debug.Log("Player: Detected crop " + crop.gameObject.name + " with state " + crop.state);
         }
 
-        
-        DeliveryBasket basket = other.GetComponent<DeliveryBasket>();
-        if (basket != null)
+       
+        DeliveryTable table = other.GetComponent<DeliveryTable>();
+        if (table != null)
         {
-            currentBasket = basket;
-            Debug.Log("PlayerController: Near DeliveryBasket.");
+            currentDeliveryTable = table;
+            Debug.Log("Player: Near DeliveryTable.");
         }
     }
 
@@ -100,21 +116,21 @@ public class PlayerController : MonoBehaviour
         if (tile != null && tile == currentTile)
         {
             currentTile = null;
-            Debug.Log("PlayerController: Exited CropTile " + tile.gameObject.name);
+            Debug.Log("Player: Exited CropTile " + tile.gameObject.name);
         }
 
         CropController crop = other.GetComponent<CropController>();
-        if (crop != null && crop == currentPickupCrop)
+        if (crop != null && crop == currentCrop)
         {
-            currentPickupCrop = null;
-            Debug.Log("PlayerController: Left harvested crop area.");
+            currentCrop = null;
+            Debug.Log("Player: Left crop area " + crop.gameObject.name);
         }
 
-        DeliveryBasket basket = other.GetComponent<DeliveryBasket>();
-        if (basket != null && basket == currentBasket)
+        DeliveryTable table = other.GetComponent<DeliveryTable>();
+        if (table != null && table == currentDeliveryTable)
         {
-            currentBasket = null;
-            Debug.Log("PlayerController: Left DeliveryBasket area.");
+            currentDeliveryTable = null;
+            Debug.Log("Player: Left DeliveryTable area.");
         }
     }
 }

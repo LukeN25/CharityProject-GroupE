@@ -36,18 +36,17 @@ public class TaskManager : MonoBehaviour
         Debug.Log($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
     }
 
-    
-    public void DeliverCrop(SeedInventoryManager.SeedType cropType)
+    public void DeliverCrop(SeedType cropType)
     {
-        if (cropType == SeedInventoryManager.SeedType.Potato)
+        if (cropType == SeedType.Potato)
         {
             collectedPotatoes++;
-            Debug.Log("Delivered Potato. Total: " + collectedPotatoes);
+            Debug.Log("TaskManager: Delivered Potato. Total: " + collectedPotatoes);
         }
-        else if (cropType == SeedInventoryManager.SeedType.Tomato)
+        else if (cropType == SeedType.Tomato)
         {
             collectedTomatoes++;
-            Debug.Log("Delivered Tomato. Total: " + collectedTomatoes);
+            Debug.Log("TaskManager: Delivered Tomato. Total: " + collectedTomatoes);
         }
         CheckTaskCompletion();
     }
@@ -56,7 +55,7 @@ public class TaskManager : MonoBehaviour
     {
         if (collectedPotatoes >= requiredPotatoes && collectedTomatoes >= requiredTomatoes)
         {
-            Debug.Log("Task Complete! Generating new task...");
+            Debug.Log("TaskManager: Task Complete! Generating new task...");
             GenerateNewTask();
         }
     }

@@ -1,90 +1,70 @@
-﻿using UnityEngine;
-using System.Collections;
-
+﻿
+using UnityEngine;
 
 public class CropController : MonoBehaviour
 {
-    public enum CropState { Planted, Watered, Harvested }
-    public CropState state = CropState.Planted;
+    public enum CropState { Growing, Finished }
+    public CropState state = CropState.Growing;
 
-    
-    public SeedInventoryManager.SeedType seedType;
-    public CropTile tile;  
+    public SeedType seedType;  
+    public CropTile tile;       
 
-    [Header("Timings")]
-    public float waterDelay = 3f;    
-    public float harvestDelay = 3f; 
+    public int mashThreshold = 20;  
+    private int mashCount = 0;
 
     [Header("Appearance")]
     public Sprite potatoSprite;
     public Sprite tomatoSprite;
-    public Sprite harvestedSprite;   
+    public Sprite finishedSprite;   
 
-   
-    public Transform progressBar;
+    private SpriteRenderer sr;
 
     void Start()
     {
-        if (progressBar != null)
-        {
-            progressBar.localScale = new Vector3(0f, 1f, 1f);
-            progressBar.gameObject.SetActive(false);
-        }
-        UpdateCropAppearance();
-        StartCoroutine(LifeCycle());
+        sr = GetComponent<SpriteRenderer>();
+        UpdateAppearance();
     }
 
-    IEnumerator LifeCycle()
-    {
-        yield return new WaitForSeconds(waterDelay);
-        WaterCrop();
-        yield return new WaitForSeconds(harvestDelay);
-        HarvestCrop();
-    }
-
-    public void PlantSeed(SeedInventoryManager.SeedType newSeed)
+    public void PlantSeed(SeedType newSeed)
     {
         seedType = newSeed;
-        state = CropState.Planted;
-        UpdateCropAppearance();
+        state = CropState.Growing;
+        mashCount = 0;
+        UpdateAppearance();
         Debug.Log("CropController: Planted " + seedType + " seed.");
     }
 
-    public void WaterCrop()
+   
+    public void MashCrop()
     {
-        if (state == CropState.Planted)
+        if (state == CropState.Growing)
         {
-            state = CropState.Watered;
-            Debug.Log("CropController: Crop watered.");
-            UpdateCropAppearance();
+            mashCount++;
+            Debug.Log("CropController: Mash count " + mashCount + "/" + mashThreshold);
+            if (mashCount >= mashThreshold)
+            {
+                state = CropState.Finished;
+                UpdateAppearance();
+                Debug.Log("CropController: Crop finished growing.");
+            }
         }
     }
 
-    public void HarvestCrop()
+    public void UpdateAppearance()
     {
-        if (state == CropState.Watered)
-        {
-            state = CropState.Harvested;
-            Debug.Log("CropController: Crop harvested and ready for delivery.");
-            UpdateCropAppearance();
-        }
-    }
-
-    public void UpdateCropAppearance()
-    {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null)
         {
-            if (state == CropState.Planted)
+            if (state == CropState.Growing)
             {
-                if (seedType == SeedInventoryManager.SeedType.Potato)
+                if (seedType == SeedType.Potato)
                     sr.sprite = potatoSprite;
-                else if (seedType == SeedInventoryManager.SeedType.Tomato)
+                else if (seedType == SeedType.Tomato)
                     sr.sprite = tomatoSprite;
             }
-            else if (state == CropState.Harvested && harvestedSprite != null)
+            else if (state == CropState.Finished)
             {
-                sr.sprite = harvestedSprite;
+                if (finishedSprite != null)
+                    sr.sprite = finishedSprite;
             }
         }
     }

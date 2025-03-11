@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeedPickup : MonoBehaviour
 {
-    public SeedInventoryManager.SeedType seedType;  
+    public SeedType seedType;  
     public float respawnTime = 5f;  
 
     private Collider2D col;
@@ -26,17 +26,14 @@ public class SeedPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("SeedPickup: Trigger entered by " + other.name);
+        
         if (other.CompareTag("Player"))
         {
-            if (SeedInventoryManager.Instance != null)
+            PlayerController player = other.GetComponent<PlayerController>();
+            if (player != null)
             {
-                SeedInventoryManager.Instance.PickUpSeed(seedType);
+                player.PickUpSeed(seedType);
                 StartCoroutine(Respawn());
-            }
-            else
-            {
-                Debug.LogError("SeedPickup: SeedInventoryManager.Instance is null.");
             }
         }
     }
@@ -45,10 +42,8 @@ public class SeedPickup : MonoBehaviour
     {
         col.enabled = false;
         sr.enabled = false;
-        Debug.Log("SeedPickup: Hiding seed pickup.");
         yield return new WaitForSeconds(respawnTime);
         col.enabled = true;
         sr.enabled = true;
-        Debug.Log("SeedPickup: Seed pickup has respawned.");
     }
 }
