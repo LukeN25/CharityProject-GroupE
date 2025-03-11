@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ToolManager : MonoBehaviour
 {
     public static ToolManager Instance;
@@ -12,6 +11,7 @@ public class ToolManager : MonoBehaviour
     private ToolType currentTool = ToolType.None;
     private SeedType currentSeed = SeedType.None;
 
+    
     public Image wateringCanIcon;
     public Image shovelIcon;
     public Image seedIcon;
@@ -53,20 +53,26 @@ public class ToolManager : MonoBehaviour
 
     private void UpdateToolUI()
     {
-        wateringCanIcon.color = defaultColor;
-        shovelIcon.color = defaultColor;
-        seedIcon.color = defaultColor;
+        if (wateringCanIcon != null) wateringCanIcon.color = defaultColor;
+        if (shovelIcon != null) shovelIcon.color = defaultColor;
+        if (seedIcon != null) seedIcon.color = defaultColor;
 
-        if (currentTool == ToolType.WateringCan) wateringCanIcon.color = highlightColor;
-        if (currentTool == ToolType.Shovel) shovelIcon.color = highlightColor;
-        if (currentTool == ToolType.Seed) seedIcon.color = highlightColor;
+        if (currentTool == ToolType.WateringCan && wateringCanIcon != null)
+            wateringCanIcon.color = highlightColor;
+        if (currentTool == ToolType.Shovel && shovelIcon != null)
+            shovelIcon.color = highlightColor;
+        if (currentTool == ToolType.Seed && seedIcon != null)
+            seedIcon.color = highlightColor;
 
-        seedIcon.sprite = currentSeed switch
+        if (seedIcon != null)
         {
-            SeedType.Potato => potatoSeedSprite,
-            SeedType.Tomato => tomatoSeedSprite,
-            _ => emptySeedSprite
-        };
+            seedIcon.sprite = currentSeed switch
+            {
+                SeedType.Potato => potatoSeedSprite,
+                SeedType.Tomato => tomatoSeedSprite,
+                _ => emptySeedSprite,
+            };
+        }
     }
 
     public ToolType GetCurrentTool() => currentTool;

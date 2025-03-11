@@ -5,15 +5,14 @@ public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
 
-    [Header("Task Requirements")]
     public int requiredPotatoes;
     public int requiredTomatoes;
 
     private int collectedPotatoes = 0;
     private int collectedTomatoes = 0;
 
-    public int CollectedPotatoes { get { return collectedPotatoes; } }
-    public int CollectedTomatoes { get { return collectedTomatoes; } }
+    public int CollectedPotatoes => collectedPotatoes;
+    public int CollectedTomatoes => collectedTomatoes;
 
     void Awake()
     {
@@ -28,30 +27,28 @@ public class TaskManager : MonoBehaviour
         GenerateNewTask();
     }
 
-   
     void GenerateNewTask()
     {
         requiredPotatoes = UnityEngine.Random.Range(1, 4);
         requiredTomatoes = UnityEngine.Random.Range(1, 4);
         collectedPotatoes = 0;
         collectedTomatoes = 0;
-        Debug.Log($"New Task: Bring {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
+        Debug.Log($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
     }
 
-   
-    public void DeliverCrop(ToolManager.SeedType cropType)
+    
+    public void DeliverCrop(SeedInventoryManager.SeedType cropType)
     {
-        if (cropType == ToolManager.SeedType.Potato)
+        if (cropType == SeedInventoryManager.SeedType.Potato)
         {
             collectedPotatoes++;
-            Debug.Log("Delivered a Potato. Total: " + collectedPotatoes);
+            Debug.Log("Delivered Potato. Total: " + collectedPotatoes);
         }
-        else if (cropType == ToolManager.SeedType.Tomato)
+        else if (cropType == SeedInventoryManager.SeedType.Tomato)
         {
             collectedTomatoes++;
-            Debug.Log("Delivered a Tomato. Total: " + collectedTomatoes);
+            Debug.Log("Delivered Tomato. Total: " + collectedTomatoes);
         }
-
         CheckTaskCompletion();
     }
 
