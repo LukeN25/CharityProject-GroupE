@@ -8,7 +8,7 @@ public class CropTile : MonoBehaviour
 
     public void PlantCrop(SeedType seed)
     {
-        Debug.Log("CropTile: Planting seed " + seed + " on " + gameObject.name);
+        Debug.Log("CropTile: Planting " + seed + " on " + gameObject.name);
         if (isOccupied)
         {
             Debug.Log("CropTile: Already occupied.");
@@ -16,7 +16,7 @@ public class CropTile : MonoBehaviour
         }
         if (cropPrefab == null)
         {
-            Debug.LogError("CropTile: cropPrefab is not assigned!");
+            Debug.LogError("CropTile: cropPrefab not assigned!");
             return;
         }
         GameObject cropObj = Instantiate(cropPrefab, transform.position, Quaternion.identity);
@@ -29,7 +29,7 @@ public class CropTile : MonoBehaviour
         }
         else
         {
-            Debug.LogError("CropTile: cropPrefab does not have CropController!");
+            Debug.LogError("CropTile: cropPrefab missing CropController!");
         }
     }
 

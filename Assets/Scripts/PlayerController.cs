@@ -1,3 +1,4 @@
+using System.Collections;
 
 using UnityEngine;
 
@@ -8,13 +9,17 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
 
     
-    public SeedType currentSeed = SeedType.None;   
-    public CropController heldCrop;                  
+    public SeedType currentSeed = SeedType.None;
+    public CropController heldCrop; 
 
     
-    private CropTile currentTile;        
+    private CropTile currentTile;         
     private CropController currentCrop;  
     private DeliveryTable currentDeliveryTable;  
+
+    
+    private bool isSlippery = false;
+    private float slipperyMultiplier = 1f;
 
     void Start()
     {
@@ -23,20 +28,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            
+           
             if (currentDeliveryTable != null && heldCrop != null)
             {
                 currentDeliveryTable.DeliverCrop(heldCrop);
                 heldCrop = null;
             }
-            
             
             
             else if (currentCrop != null)
@@ -58,14 +61,14 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Player: No interactable object.");
+                Debug.Log("Player: No interactable object available.");
             }
         }
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = movement * moveSpeed;
+        rb.linearVelocity = movement * moveSpeed * slipperyMultiplier;
     }
 
     public void PickUpSeed(SeedType seed)
@@ -77,10 +80,23 @@ public class PlayerController : MonoBehaviour
     private void PickUpCrop(CropController crop)
     {
         heldCrop = crop;
-       
         crop.transform.SetParent(transform);
-        crop.transform.localPosition = new Vector3(0, 1, 0); 
+        crop.transform.localPosition = new Vector3(0, 1, 0);
         Debug.Log("Player: Picked up finished crop: " + crop.seedType);
+    }
+
+    public void ApplySlipperyEffect(float multiplier, float duration)
+    {
+        StartCoroutine(SlipperyCoroutine(multiplier, duration));
+    }
+
+    private IEnumerator SlipperyCoroutine(float multiplier, float duration)
+    {
+        isSlippery = true;
+        slipperyMultiplier = multiplier;
+        yield return new WaitForSeconds(duration);
+        isSlippery = false;
+        slipperyMultiplier = 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -92,21 +108,33 @@ public class PlayerController : MonoBehaviour
             currentTile = tile;
             Debug.Log("Player: Entered CropTile " + tile.gameObject.name);
         }
-
         
         CropController crop = other.GetComponent<CropController>();
         if (crop != null)
         {
-            currentCrop = crop;
-            Debug.Log("Player: Detected crop " + crop.gameObject.name + " with state " + crop.state);
+            Debug.Log("Player: Detected crop " + crop.gameObject.name + " (state: " + crop.state + ")");
+            if (crop.state == CropController.CropState.Finished)
+            {
+                currentCrop = crop;
+            }
+            else if (crop.state == CropController.CropState.Growing)
+            {
+                currentCrop = crop;
+            }
         }
-
-       
+        
         DeliveryTable table = other.GetComponent<DeliveryTable>();
         if (table != null)
         {
             currentDeliveryTable = table;
             Debug.Log("Player: Near DeliveryTable.");
+        }
+        
+        Puddle puddle = other.GetComponent<Puddle>();
+        if (puddle != null)
+        {
+            ApplySlipperyEffect(puddle.slipperyMultiplier, puddle.slipperyDuration);
+            Debug.Log("Player: Entered a puddle.");
         }
     }
 
@@ -118,14 +146,12 @@ public class PlayerController : MonoBehaviour
             currentTile = null;
             Debug.Log("Player: Exited CropTile " + tile.gameObject.name);
         }
-
         CropController crop = other.GetComponent<CropController>();
         if (crop != null && crop == currentCrop)
         {
             currentCrop = null;
             Debug.Log("Player: Left crop area " + crop.gameObject.name);
         }
-
         DeliveryTable table = other.GetComponent<DeliveryTable>();
         if (table != null && table == currentDeliveryTable)
         {

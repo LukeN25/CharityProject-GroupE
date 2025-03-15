@@ -1,5 +1,8 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+
 
 public class CropController : MonoBehaviour
 {
@@ -7,21 +10,29 @@ public class CropController : MonoBehaviour
     public CropState state = CropState.Growing;
 
     public SeedType seedType;  
-    public CropTile tile;       
+    public CropTile tile;      
 
-    public int mashThreshold = 20;  
+    public int mashThreshold = 20; 
     private int mashCount = 0;
 
     [Header("Appearance")]
     public Sprite potatoSprite;
     public Sprite tomatoSprite;
-    public Sprite finishedSprite;   
+    public Sprite finishedSprite;  
+
+    [Header("Mashing Progress Bar")]
+    public Image progressBar;  
 
     private SpriteRenderer sr;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        if (progressBar != null)
+        {
+            progressBar.fillAmount = 0;
+            progressBar.gameObject.SetActive(false);
+        }
         UpdateAppearance();
     }
 
@@ -37,16 +48,22 @@ public class CropController : MonoBehaviour
    
     public void MashCrop()
     {
-        if (state == CropState.Growing)
+        if (state != CropState.Growing)
+            return;
+        mashCount++;
+        if (progressBar != null)
         {
-            mashCount++;
-            Debug.Log("CropController: Mash count " + mashCount + "/" + mashThreshold);
-            if (mashCount >= mashThreshold)
-            {
-                state = CropState.Finished;
-                UpdateAppearance();
-                Debug.Log("CropController: Crop finished growing.");
-            }
+            progressBar.gameObject.SetActive(true);
+            progressBar.fillAmount = (float)mashCount / mashThreshold;
+        }
+        Debug.Log("CropController: Mash count " + mashCount + "/" + mashThreshold);
+        if (mashCount >= mashThreshold)
+        {
+            state = CropState.Finished;
+            if (progressBar != null)
+                progressBar.gameObject.SetActive(false);
+            UpdateAppearance();
+            Debug.Log("CropController: Crop finished growing.");
         }
     }
 

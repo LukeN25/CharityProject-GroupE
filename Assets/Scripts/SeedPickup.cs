@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeedPickup : MonoBehaviour
 {
     public SeedType seedType;  
-    public float respawnTime = 5f;  
+    public float respawnTime = 5f;
 
     private Collider2D col;
     private SpriteRenderer sr;
@@ -19,14 +19,12 @@ public class SeedPickup : MonoBehaviour
             Debug.LogError("SeedPickup: No Collider2D on " + gameObject.name);
         else if (!col.isTrigger)
             Debug.LogWarning("SeedPickup: Collider2D on " + gameObject.name + " should be set as Trigger.");
-
         if (sr == null)
             Debug.LogError("SeedPickup: No SpriteRenderer on " + gameObject.name);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.CompareTag("Player"))
         {
             PlayerController player = other.GetComponent<PlayerController>();

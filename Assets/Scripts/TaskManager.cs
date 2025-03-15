@@ -10,6 +10,7 @@ public class TaskManager : MonoBehaviour
 
     private int collectedPotatoes = 0;
     private int collectedTomatoes = 0;
+    public int difficultyLevel = 1;
 
     public int CollectedPotatoes => collectedPotatoes;
     public int CollectedTomatoes => collectedTomatoes;
@@ -29,24 +30,26 @@ public class TaskManager : MonoBehaviour
 
     void GenerateNewTask()
     {
-        requiredPotatoes = UnityEngine.Random.Range(1, 4);
-        requiredTomatoes = UnityEngine.Random.Range(1, 4);
+        
+        requiredPotatoes = UnityEngine.Random.Range(2, 3 + difficultyLevel); 
+        requiredTomatoes = UnityEngine.Random.Range(3, 5 + difficultyLevel);
         collectedPotatoes = 0;
         collectedTomatoes = 0;
         Debug.Log($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
     }
 
+    
     public void DeliverCrop(SeedType cropType)
     {
         if (cropType == SeedType.Potato)
         {
             collectedPotatoes++;
-            Debug.Log("TaskManager: Delivered Potato. Total: " + collectedPotatoes);
+            Debug.Log("Delivered Potato. Total: " + collectedPotatoes);
         }
         else if (cropType == SeedType.Tomato)
         {
             collectedTomatoes++;
-            Debug.Log("TaskManager: Delivered Tomato. Total: " + collectedTomatoes);
+            Debug.Log("Delivered Tomato. Total: " + collectedTomatoes);
         }
         CheckTaskCompletion();
     }
@@ -55,7 +58,7 @@ public class TaskManager : MonoBehaviour
     {
         if (collectedPotatoes >= requiredPotatoes && collectedTomatoes >= requiredTomatoes)
         {
-            Debug.Log("TaskManager: Task Complete! Generating new task...");
+            Debug.Log("Task Complete! Generating new task...");
             GenerateNewTask();
         }
     }
