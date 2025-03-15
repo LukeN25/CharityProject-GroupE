@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-
 public class CropController : MonoBehaviour
 {
     public enum CropState { Growing, Finished }
@@ -21,7 +20,7 @@ public class CropController : MonoBehaviour
     public Sprite finishedSprite;  
 
     [Header("Mashing Progress Bar")]
-    public Image progressBar;  
+    public Image progressBar; 
 
     private SpriteRenderer sr;
 
@@ -45,11 +44,12 @@ public class CropController : MonoBehaviour
         Debug.Log("CropController: Planted " + seedType + " seed.");
     }
 
-   
+    
     public void MashCrop()
     {
         if (state != CropState.Growing)
             return;
+
         mashCount++;
         if (progressBar != null)
         {
@@ -57,6 +57,7 @@ public class CropController : MonoBehaviour
             progressBar.fillAmount = (float)mashCount / mashThreshold;
         }
         Debug.Log("CropController: Mash count " + mashCount + "/" + mashThreshold);
+
         if (mashCount >= mashThreshold)
         {
             state = CropState.Finished;
@@ -78,10 +79,9 @@ public class CropController : MonoBehaviour
                 else if (seedType == SeedType.Tomato)
                     sr.sprite = tomatoSprite;
             }
-            else if (state == CropState.Finished)
+            else if (state == CropState.Finished && finishedSprite != null)
             {
-                if (finishedSprite != null)
-                    sr.sprite = finishedSprite;
+                sr.sprite = finishedSprite;
             }
         }
     }

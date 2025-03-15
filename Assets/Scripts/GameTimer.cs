@@ -1,13 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class GameTimer : MonoBehaviour
 {
     public float startTime = 120f;  
     private float currentTime;
-    public Text timerText; 
+    public TextMeshProUGUI timerText;  
 
     void Start()
     {
@@ -29,6 +28,6 @@ public class GameTimer : MonoBehaviour
     void GameOver()
     {
         UIManager.Instance.ShowGameOverScreen();
-        Time.timeScale = 0; 
+        Time.timeScale = 0;  
     }
 }
