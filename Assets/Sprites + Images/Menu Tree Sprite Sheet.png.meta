@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 76a29a817b8f222478c6f52f42871d43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3543751563372821652
+    second: Menu Tree Sprite Sheet_0
+  - first:
+      213: 6543428711912445395
+    second: Menu Tree Sprite Sheet_1
+  - first:
+      213: -1227267705873648821
+    second: Menu Tree Sprite Sheet_2
+  - first:
+      213: -2494573796929912406
+    second: Menu Tree Sprite Sheet_3
+  - first:
+      213: 9191377364725665726
+    second: Menu Tree Sprite Sheet_4
+  - first:
+      213: -8463375792563823640
+    second: Menu Tree Sprite Sheet_5
+  - first:
+      213: 2707638793999592815
+    second: Menu Tree Sprite Sheet_6
+  - first:
+      213: 4267801717605992948
+    second: Menu Tree Sprite Sheet_7
+  - first:
+      213: 5191575606363232195
+    second: Menu Tree Sprite Sheet_8
+  - first:
+      213: 2745624992794215510
+    second: Menu Tree Sprite Sheet_9
+  - first:
+      213: -8845720682068228617
+    second: Menu Tree Sprite Sheet_10
+  - first:
+      213: 7592147932351020937
+    second: Menu Tree Sprite Sheet_11
+  - first:
+      213: -5390463374624124810
+    second: Menu Tree Sprite Sheet_12
+  - first:
+      213: 9067017790440787156
+    second: Menu Tree Sprite Sheet_13
+  - first:
+      213: -2943489599455825729
+    second: Menu Tree Sprite Sheet_14
+  - first:
+      213: 7352886672927092915
+    second: Menu Tree Sprite Sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7004
+        y: 1060
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c7213754fed2130800000000000000
+      internalID: 3543751563372821652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1036
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d512a2bebdeeca50800000000000000
+      internalID: 6543428711912445395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1028
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43b71b168ed7fee0800000000000000
+      internalID: -1227267705873648821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1029
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1cef7395e716dd0800000000000000
+      internalID: -2494573796929912406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4855
+        y: 1028
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf0a05e3055e8f70800000000000000
+      internalID: 9191377364725665726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 1039
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebd79bbe8c0c8a80800000000000000
+      internalID: -8463375792563823640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6da9603327739520800000000000000
+      internalID: 2707638793999592815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f905b5ec074a3b30800000000000000
+      internalID: 4267801717605992948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 0
+        width: 813
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c71dd1028e2c0840800000000000000
+      internalID: 5191575606363232195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6540fed426b6a1620800000000000000
+      internalID: 2745624992794215510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 4507
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f54ff208efad3580800000000000000
+      internalID: -8845720682068228617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5452
+        y: 532
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fbffdc15abc5960800000000000000
+      internalID: 7592147932351020937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 5587
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67096c4ee1a3135b0800000000000000
+      internalID: -5390463374624124810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 6667
+        y: 0
+        width: 705
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcce5b24a484dd70800000000000000
+      internalID: 9067017790440787156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7620
+        y: 533
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0f068fdcf9627d0800000000000000
+      internalID: -2943489599455825729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Tree Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 7747
+        y: 0
+        width: 705
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0f585c873ba0660800000000000000
+      internalID: 7352886672927092915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
