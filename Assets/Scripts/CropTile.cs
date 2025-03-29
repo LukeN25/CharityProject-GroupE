@@ -31,6 +31,7 @@ public class CropTile : MonoBehaviour
         {
             Debug.LogError("CropTile: cropPrefab missing CropController!");
         }
+
     }
 
     public void RemoveCrop()

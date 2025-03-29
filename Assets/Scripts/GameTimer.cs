@@ -25,6 +25,12 @@ public class GameTimer : MonoBehaviour
             timerText.text = Mathf.Ceil(currentTime).ToString();
     }
 
+    
+    public void AddTime(float timeToAdd)
+    {
+        currentTime += timeToAdd;
+    }
+
     void GameOver()
     {
         UIManager.Instance.ShowGameOverScreen();

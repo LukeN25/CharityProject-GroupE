@@ -10,6 +10,7 @@ public class DeliveryTable : MonoBehaviour
         taskManager = TaskManager.Instance;
     }
 
+    
     public void DeliverCrop(CropController crop)
     {
         if (taskManager != null)
@@ -24,5 +25,11 @@ public class DeliveryTable : MonoBehaviour
         {
             Debug.LogError("DeliveryTable: TaskManager.Instance is null.");
         }
+    }
+
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+     
     }
 }

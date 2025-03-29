@@ -1,19 +1,36 @@
-
 using UnityEngine;
+using TMPro;
+using System.Collections;
+
 
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
 
-    public int requiredPotatoes;
-    public int requiredTomatoes;
-
+    [Header("Task Settings")]
+    public int requiredPotatoes = 2;
+    public int requiredTomatoes = 3;
     private int collectedPotatoes = 0;
     private int collectedTomatoes = 0;
-    public int difficultyLevel = 1;
 
-    public int CollectedPotatoes => collectedPotatoes;
-    public int CollectedTomatoes => collectedTomatoes;
+    
+    public int CollectedPotatoes { get { return collectedPotatoes; } }
+    public int CollectedTomatoes { get { return collectedTomatoes; } }
+
+    [Header("UI & Timer Settings")]
+    public TextMeshProUGUI taskPromptText;   
+    public float taskPromptDuration = 5f;     
+    public GameTimer gameTimer;              
+    public float extraTimePerTask = 30f;      
+
+    [Header("Audio Settings")]
+    public AudioSource audioSource;          
+    public AudioClip mashSound;              
+    public AudioClip cropCompleteSound;     
+    public AudioClip deliverySound;          
+    public AudioClip taskCompleteSound;      
+    public AudioClip pickupSound;            
+    public AudioClip puddleSound;            
 
     void Awake()
     {
@@ -30,12 +47,33 @@ public class TaskManager : MonoBehaviour
 
     void GenerateNewTask()
     {
-        
-        requiredPotatoes = UnityEngine.Random.Range(2, 3 + difficultyLevel); 
-        requiredTomatoes = UnityEngine.Random.Range(3, 5 + difficultyLevel);
+       
+        requiredPotatoes = UnityEngine.Random.Range(2, 5);  
+        requiredTomatoes = UnityEngine.Random.Range(3, 6);  
         collectedPotatoes = 0;
         collectedTomatoes = 0;
-        Debug.Log($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
+        DisplayTaskPrompt($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
+
+        
+        if (gameTimer != null)
+            gameTimer.AddTime(extraTimePerTask);
+    }
+
+    void DisplayTaskPrompt(string message)
+    {
+        if (taskPromptText != null)
+        {
+            taskPromptText.text = message;
+            taskPromptText.gameObject.SetActive(true);
+            StartCoroutine(HideTaskPromptAfterDelay());
+        }
+    }
+
+    IEnumerator HideTaskPromptAfterDelay()
+    {
+        yield return new WaitForSeconds(taskPromptDuration);
+        if (taskPromptText != null)
+            taskPromptText.gameObject.SetActive(false);
     }
 
     
@@ -44,13 +82,15 @@ public class TaskManager : MonoBehaviour
         if (cropType == SeedType.Potato)
         {
             collectedPotatoes++;
-            Debug.Log("Delivered Potato. Total: " + collectedPotatoes);
+            Debug.Log("TaskManager: Delivered Potato. Total: " + collectedPotatoes);
         }
         else if (cropType == SeedType.Tomato)
         {
             collectedTomatoes++;
-            Debug.Log("Delivered Tomato. Total: " + collectedTomatoes);
+            Debug.Log("TaskManager: Delivered Tomato. Total: " + collectedTomatoes);
         }
+        if (audioSource != null && deliverySound != null)
+            audioSource.PlayOneShot(deliverySound);
         CheckTaskCompletion();
     }
 
@@ -58,7 +98,9 @@ public class TaskManager : MonoBehaviour
     {
         if (collectedPotatoes >= requiredPotatoes && collectedTomatoes >= requiredTomatoes)
         {
-            Debug.Log("Task Complete! Generating new task...");
+            if (audioSource != null && taskCompleteSound != null)
+                audioSource.PlayOneShot(taskCompleteSound);
+            Debug.Log("TaskManager: Task Complete! Generating new task...");
             GenerateNewTask();
         }
     }
