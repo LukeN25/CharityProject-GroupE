@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,20 +139,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 5721
-        y: 1055
-        width: 11
-        height: 11
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 992aa633242a12ca0800000000000000
-      internalID: -6043370819740327271
+      spriteID: 14ba60817fa5dd846b86468418435c3b
+      internalID: 1554097141
       vertices: []
       indices: 
       edges: []
@@ -161,20 +161,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 340
-        y: 41
-        width: 401
-        height: 754
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c074c78976b1ca100800000000000000
-      internalID: 120501421786023692
+      spriteID: ffba4b41b6d7a2d459f1f67991e3fc7f
+      internalID: -721755824
       vertices: []
       indices: 
       edges: []
@@ -183,20 +183,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 44
-        width: 401
-        height: 752
+        x: 2160
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 079ae2e9ac5b3b300800000000000000
-      internalID: 266756684786870640
+      spriteID: a6e9ac16fefb8b94588cd157977e80f1
+      internalID: 1311435845
       vertices: []
       indices: 
       edges: []
@@ -205,20 +205,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 205
-        width: 401
-        height: 590
+        x: 3240
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f73711520572bf00800000000000000
-      internalID: 1131095109234276338
+      spriteID: 84079a9124e88c8428db20e844615e33
+      internalID: -1950461788
       vertices: []
       indices: 
       edges: []
@@ -227,20 +227,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 3301
-        y: 615
-        width: 29
-        height: 16
+        x: 4320
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a02116ff8921636a0800000000000000
-      internalID: -6469963366342258166
+      spriteID: 12101981cdb249b42b126748da41fc17
+      internalID: -1611035410
       vertices: []
       indices: 
       edges: []
@@ -249,174 +249,20 @@ TextureImporter:
       name: Walk Down Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 3580
-        y: 206
-        width: 401
-        height: 590
+        x: 5400
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 37403df59077c60c0800000000000000
-      internalID: -4581155838796561293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 4660
-        y: 206
-        width: 401
-        height: 589
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8406b74f673eea320800000000000000
-      internalID: 2571242537322504264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 5740
-        y: 206
-        width: 401
-        height: 589
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32663a6c3e7a665d0800000000000000
-      internalID: -3069581499274402269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 523
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f695067c78fd2650800000000000000
-      internalID: 6209892674653492978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 2222
-        y: 523
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 206bfd85db6c3d480800000000000000
-      internalID: -8875531924074940926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 492
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8f1f08b300b9e7f0800000000000000
-      internalID: -582741146748379252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 4801
-        y: 44
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08d99063f8df38720800000000000000
-      internalID: 2847398180957035904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Down Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 5881
-        y: 45
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c4c26d42b91c25420800000000000000
-      internalID: 2617367205537786956
+      spriteID: bdb8fdb9da8e88c458687c51ee68161b
+      internalID: -634402131
       vertices: []
       indices: 
       edges: []
@@ -425,7 +271,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a92e85106ed917e49aae5d4d91265215
     internalID: 0
     vertices: []
     indices: 
@@ -434,7 +280,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk Down Sprite Sheet_0: 1554097141
+      Walk Down Sprite Sheet_1: -721755824
+      Walk Down Sprite Sheet_2: 1311435845
+      Walk Down Sprite Sheet_3: -1950461788
+      Walk Down Sprite Sheet_4: -1611035410
+      Walk Down Sprite Sheet_5: -634402131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

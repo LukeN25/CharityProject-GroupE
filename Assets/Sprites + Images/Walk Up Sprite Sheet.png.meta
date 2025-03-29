@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,10 +127,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 4850
-        y: 992
-        width: 11
-        height: 13
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 52
-        y: 246
-        width: 688
-        height: 589
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 1419
-        y: 246
-        width: 401
-        height: 589
+        x: 2160
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 2499
-        y: 246
-        width: 401
-        height: 589
+        x: 3240
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 3579
-        y: 241
-        width: 401
-        height: 594
+        x: 4320
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: Walk Up Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 4659
-        y: 243
-        width: 401
-        height: 594
+        x: 5400
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,77 +255,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Walk Up Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 5510
-        y: 514
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 798c430d1f4b7d870800000000000000
-      internalID: 8707627355217381527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Up Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 5739
-        y: 241
-        width: 401
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87017a143695844e0800000000000000
-      internalID: -1997248151900712840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk Up Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 539
-        y: 41
-        width: 11
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd2c3896724d81f60800000000000000
-      internalID: 8005381603390112479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 49a9c95ae84fe054a9d9da02232038ca
     internalID: 0
     vertices: []
     indices: 
@@ -334,7 +268,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk Up Sprite Sheet_0: -448221286732653623
+      Walk Up Sprite Sheet_1: 3251826269393948497
+      Walk Up Sprite Sheet_2: -4549676102903119001
+      Walk Up Sprite Sheet_3: -7582169374291580919
+      Walk Up Sprite Sheet_4: 1169305839204890319
+      Walk Up Sprite Sheet_5: -237794320952076157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
