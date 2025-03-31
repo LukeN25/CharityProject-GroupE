@@ -141,7 +141,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 206
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -193,10 +193,10 @@ TextureImporter:
       name: Menu House Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 265
-        y: 969
-        width: 71
-        height: 70
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Menu House Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 350
-        y: 969
-        width: 18
-        height: 74
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: Menu House Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 382
-        y: 968
-        width: 65
-        height: 67
+        x: 2160
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: Menu House Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 1343
-        y: 1009
-        width: 71
-        height: 70
+        x: 3240
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Menu House Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 1428
-        y: 1009
-        width: 18
-        height: 71
+        x: 4320
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,583 +299,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1460
-        y: 1008
-        width: 65
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20b4bb1bebe412040800000000000000
-      internalID: 4621061273591433986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 2423
-        y: 1001
-        width: 71
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49618309cc57e1f70800000000000000
-      internalID: 9159888213571540628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 2508
-        y: 1001
-        width: 18
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b17f280d236cc3640800000000000000
-      internalID: 5061138002806503195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 2540
-        y: 1000
-        width: 65
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b91aa2b45eb0d2970800000000000000
-      internalID: 8731648331977761179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 3503
-        y: 1001
-        width: 71
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95f19b55ef9deb370800000000000000
-      internalID: 8340343246319853401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 3588
-        y: 1001
-        width: 18
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd250e101380c2e80800000000000000
-      internalID: -8202171814770617635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 3620
-        y: 1000
-        width: 65
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 300b02397fb068460800000000000000
-      internalID: 7243490208625242115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 4508
-        y: 0
-        width: 705
-        height: 1046
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e19a695bab93f1d40800000000000000
-      internalID: 5557223939271731486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 4583
-        y: 1001
-        width: 71
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a0880082845b0470800000000000000
-      internalID: 8361870052613980327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 4668
-        y: 1001
-        width: 18
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df60ce6b4e4292050800000000000000
-      internalID: 5776188561819436797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 4700
-        y: 1000
-        width: 65
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32e46829e8294ad20800000000000000
-      internalID: 3288914768928591395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 0
-        width: 705
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f89a6b9ae3ffe92c0800000000000000
-      internalID: -4422817139430872689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 1268
-        y: 0
-        width: 705
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5f1a6624c09d0650800000000000000
-      internalID: 6200771434091519834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 1967
-        y: 560
-        width: 43
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1434e4be867a66980800000000000000
-      internalID: -8545959173822725311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 2348
-        y: 0
-        width: 705
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19907ef076ce10300800000000000000
-      internalID: 216714184483080593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 3049
-        y: 548
-        width: 38
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fcd725dfee3968c0800000000000000
-      internalID: -4005601193775080204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 3428
-        y: 0
-        width: 705
-        height: 973
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db3c7cbebd76d4350800000000000000
-      internalID: 6002568072605975485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 2009
-        y: 507
-        width: 36
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4191adb19d8590ec0800000000000000
-      internalID: -3600248737607575276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 3085
-        y: 473
-        width: 38
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19669e0978b5edbd0800000000000000
-      internalID: -2603542896763640175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 3112
-        y: 404
-        width: 37
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ca27f2addfbeb7b0800000000000000
-      internalID: -5206513160550929721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 4169
-        y: 426
-        width: 34
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 374c966881bf75870800000000000000
-      internalID: 8671675690278044787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 4183
-        y: 336
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44ef16bcd86af4b60800000000000000
-      internalID: 7732582213151227460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 4191
-        y: 260
-        width: 31
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad47200ae6fe99f00800000000000000
-      internalID: 1124192840415605978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_28
-      rect:
-        serializedVersion: 2
-        x: 5274
-        y: 266
-        width: 37
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f32e79920c8b93d40800000000000000
-      internalID: 5564681950064009791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 5239
-        y: 196
-        width: 38
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2a32905d76c76ca0800000000000000
-      internalID: -6023627735059776980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu House Sprite Sheet_30
-      rect:
-        serializedVersion: 2
-        x: 5312
-        y: 196
-        width: 41
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2f8731ce83610900800000000000000
-      internalID: 648909286096211755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 65bb1d367166396419da3679a290f700
     internalID: 0
     vertices: []
     indices: 
@@ -884,7 +312,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Menu House Sprite Sheet_0: 8106749446003186492
+      Menu House Sprite Sheet_1: -7851697248179490776
+      Menu House Sprite Sheet_2: 3619412915970173477
+      Menu House Sprite Sheet_3: 7744359175692739626
+      Menu House Sprite Sheet_4: 264029837283044573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

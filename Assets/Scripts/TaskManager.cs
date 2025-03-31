@@ -52,7 +52,7 @@ public class TaskManager : MonoBehaviour
         requiredTomatoes = UnityEngine.Random.Range(3, 6);  
         collectedPotatoes = 0;
         collectedTomatoes = 0;
-        DisplayTaskPrompt($"New Task: Deliver {requiredPotatoes} Potatoes and {requiredTomatoes} Tomatoes!");
+        DisplayTaskPrompt($"New Task: Deliver {requiredPotatoes} Cookies and {requiredTomatoes} Cake!");
 
         
         if (gameTimer != null)

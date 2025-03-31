@@ -99,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 206
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,10 +151,10 @@ TextureImporter:
       name: Menu City Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 535
-        y: 1032
-        width: 13
-        height: 14
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Menu City Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 3752
-        y: 1026
-        width: 11
-        height: 29
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,10 +195,10 @@ TextureImporter:
       name: Menu City Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 3788
-        y: 900
-        width: 195
-        height: 135
+        x: 2160
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Menu City Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 4949
-        y: 946
-        width: 194
-        height: 134
+        x: 3240
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Menu City Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 2623
-        y: 859
-        width: 195
-        height: 134
+        x: 4320
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,275 +257,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 4861
-        y: 966
-        width: 84
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d3f9e976febf9580800000000000000
-      internalID: -8818119579551534120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 4897
-        y: 927
-        width: 64
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 337787ff313f9d440800000000000000
-      internalID: 4961263731741325107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 0
-        width: 790
-        height: 946
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f87b0cb9170d0430800000000000000
-      internalID: 3750661871779936499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1267
-        y: 0
-        width: 722
-        height: 946
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 131fe90ae174cbc80800000000000000
-      internalID: -8305685415908675279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 2279
-        y: 0
-        width: 790
-        height: 946
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9ce122f3f1e7d4d0800000000000000
-      internalID: -3109768579820426086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 3359
-        y: 0
-        width: 790
-        height: 946
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df8eecbc3b1a9cd90800000000000000
-      internalID: -7076947545845470979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 3700
-        y: 921
-        width: 84
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b3aabe932919b630800000000000000
-      internalID: 3943210589517161401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 4439
-        y: 0
-        width: 790
-        height: 946
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 435e9d1f62dcb2620800000000000000
-      internalID: 2750517564589860148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 4932
-        y: 897
-        width: 48
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 061a63961b3d61c00800000000000000
-      internalID: 871116336870629728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 4398
-        y: 530
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbcd8a807dcbb14f0800000000000000
-      internalID: -856883672334672707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 2085
-        y: 435
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c04d3033a26bece0800000000000000
-      internalID: -1374896808203042616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu City Sprite Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 3295
-        y: 441
-        width: 26
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be0e0b3e9eff5a9b0800000000000000
-      internalID: -5069364425523142421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 91dee88a5056d1f43a233865e0b6bb56
     internalID: 0
     vertices: []
     indices: 
@@ -534,7 +270,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Menu City Sprite Sheet_0: 9028873886698731306
+      Menu City Sprite Sheet_1: 3271098469578094735
+      Menu City Sprite Sheet_2: -225405620504374038
+      Menu City Sprite Sheet_3: 6834757606932763323
+      Menu City Sprite Sheet_4: -1044758353760083014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
