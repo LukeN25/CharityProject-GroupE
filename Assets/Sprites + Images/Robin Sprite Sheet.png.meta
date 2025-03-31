@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Robin Sprite Sheet_0: 8730737766578140318
+      Robin Sprite Sheet_1: 7821756485120491361
+      Robin Sprite Sheet_2: -4539020769955190277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

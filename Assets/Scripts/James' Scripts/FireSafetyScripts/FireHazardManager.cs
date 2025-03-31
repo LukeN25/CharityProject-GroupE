@@ -18,7 +18,7 @@ public class FireHazardManager : MonoBehaviour
     {
         pressToFinishGameText.enabled = false;
         fireHazardsFound = 0;
-        fireHazardsFoundText.text = "Fire Hazards: " + fireHazardsFound.ToString() + "/6";
+        fireHazardsFoundText.text = "Fire Hazards: " + fireHazardsFound.ToString() + "/7";
     }
 
     // Update is called once per frame

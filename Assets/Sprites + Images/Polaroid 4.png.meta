@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Polaroid 4_0: -8778642184749627663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

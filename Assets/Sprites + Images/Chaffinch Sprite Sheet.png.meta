@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chaffinch Sprite Sheet_0: -4828177284044445323
+      Chaffinch Sprite Sheet_1: -5986087887921348912
+      Chaffinch Sprite Sheet_2: 426242060234265834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

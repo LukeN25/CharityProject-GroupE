@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Starling Sprite Sheet_0: -2166378068160028186
+      Starling Sprite Sheet_1: -8404984245064949882
+      Starling Sprite Sheet_2: -5690279619504808257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

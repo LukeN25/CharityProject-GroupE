@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Magpie Sprite Sheet_0: 6704912374812295535
+      Magpie Sprite Sheet_1: 8804751429652427917
+      Magpie Sprite Sheet_2: -8415657844369010128
+      Magpie Sprite Sheet_3: 5497444608648458912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
