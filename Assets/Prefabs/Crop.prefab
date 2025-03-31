@@ -733,7 +733,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.89433956, g: 0.82594526, b: 0.106308244, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -759,8 +759,8 @@ MonoBehaviour:
   seedType: 1
   tile: {fileID: 0}
   mashThreshold: 20
-  potatoSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  tomatoSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  potatoSprite: {fileID: 21300000, guid: 44d96f316172d9c46b2daf6e02f83ad1, type: 3}
+  tomatoSprite: {fileID: 21300000, guid: 44d96f316172d9c46b2daf6e02f83ad1, type: 3}
   finishedSprite: {fileID: 0}
   progressBar: {fileID: 3955011523210128539}
 --- !u!61 &-1176631585300029097
