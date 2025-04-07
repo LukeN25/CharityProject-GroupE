@@ -13,6 +13,7 @@ public class BirdScript : MonoBehaviour
 
     public BirdCounterScript birdCounterScript;
     public TakeSnapshot takeSnapshot;
+    public PolaroidScript polaroidScript;
     //public Image birdImage;
    // public Text birdText;
    
@@ -57,15 +58,27 @@ public class BirdScript : MonoBehaviour
             Debug.Log("Bird clicked");
             Debug.Log("Screenshot should happen");
             birdCounterScript.birdsSnapshotted++;
+            if(this.gameObject.tag == "Finch")
+            {
+                polaroidScript.EnableBullfinchPolaroid();
+            } 
+            if(this.gameObject.tag == "Magpie")
+            {
+                polaroidScript.EnableMagpiePolaroid();
+            }
+            if(this.gameObject.tag == "Starling")
+            {
+                polaroidScript.EnableStarlingPolaroid();
+            }
             birdCounterScript.BirdNumberIncrease();
-            DontDeleteBirdYet();
-            Destroy(this.gameObject, 1.0f);
+            //DontDeleteBirdYet();
+            Destroy(this.gameObject);
         }
     }
 
     private IEnumerator DontDeleteBirdYet()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
     }
 

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - CropTile
+  - Magpie
+  - Finch
+  - Starling
   layers:
   - Default
   - TransparentFX
