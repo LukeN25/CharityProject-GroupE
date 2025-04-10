@@ -197,6 +197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 179033424}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!212 &179033424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -415,6 +418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 228941984}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!1 &648609528
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 852662351}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!1 &1064804502
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 1064804505}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!212 &1064804505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -962,6 +974,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 1079595019}
+  anim: {fileID: 0}
+  hazardTimerInt: 5
 --- !u!1 &1080640522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 1233784621}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!1 &1296909627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireHazardManager: {fileID: 1088980350}
+  SpriteRenderer: {fileID: 1296909630}
+  anim: {fileID: 0}
+  hazardTimerInt: 0
 --- !u!212 &1296909630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1849,8 +1870,6 @@ SceneRoots:
   - {fileID: 1391157576}
   - {fileID: 1227736101}
   - {fileID: 1088980351}
-  - {fileID: 648609532}
-  - {fileID: 1484265158}
   - {fileID: 1079595020}
   - {fileID: 1233784622}
   - {fileID: 228941985}
@@ -1858,3 +1877,5 @@ SceneRoots:
   - {fileID: 1064804506}
   - {fileID: 1296909631}
   - {fileID: 179033425}
+  - {fileID: 648609532}
+  - {fileID: 1484265158}
