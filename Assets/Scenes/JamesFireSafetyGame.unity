@@ -199,7 +199,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 179033424}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 20
 --- !u!212 &179033424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 228941984}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 7
 --- !u!1 &648609528
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 852662351}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 14
 --- !u!1 &1064804502
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +755,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 1064804505}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 9
 --- !u!212 &1064804505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 1233784621}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 10
 --- !u!1 &1296909627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   fireHazardManager: {fileID: 1088980350}
   SpriteRenderer: {fileID: 1296909630}
   anim: {fileID: 0}
-  hazardTimerInt: 0
+  hazardTimerInt: 2
 --- !u!212 &1296909630
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FireHazardManager : MonoBehaviour
 {
 
-    public int fireHazards = 6;
+    public int fireHazards = 7;
 
     public int fireHazardsFound;
 
@@ -39,6 +39,6 @@ public class FireHazardManager : MonoBehaviour
     public void FoundFireHazard()
     {
         fireHazardsFound++;
-        fireHazardsFoundText.text = "Fire Hazards: " + fireHazardsFound.ToString() + "/6";
+        fireHazardsFoundText.text = "Fire Hazards: " + fireHazardsFound.ToString() + "/7";
     }
 }
