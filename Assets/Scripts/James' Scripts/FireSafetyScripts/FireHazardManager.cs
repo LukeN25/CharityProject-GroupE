@@ -28,7 +28,7 @@ public class FireHazardManager : MonoBehaviour
         {
             pressToFinishGameText.enabled = true;
 
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetKeyDown(KeyCode.Escape))
             {
                 //When scenes are compiled just uncomment the line of code below
                // SceneManager.LoadScene(MainMenuScene);
