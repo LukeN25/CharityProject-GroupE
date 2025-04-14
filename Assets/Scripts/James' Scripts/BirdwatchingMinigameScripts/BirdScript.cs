@@ -14,17 +14,19 @@ public class BirdScript : MonoBehaviour
     public BirdCounterScript birdCounterScript;
     public TakeSnapshot takeSnapshot;
     public PolaroidScript polaroidScript;
+
+    //private float scaleValue = 0.29;
     //public Image birdImage;
    // public Text birdText;
    
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float xPos = Random.Range(xPosLower, xPosUpper);
         float yVel = Random.Range(yVelLower, yVelUpper);
@@ -35,9 +37,15 @@ public class BirdScript : MonoBehaviour
             xPos = Random.Range(xPosLower, xPosUpper);
 
             if (xPos < -3)
+            {
                 xVel = Random.Range(xVelLower, xVelUpper);
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            }
             if (xPos > 3)
+            {
                 xVel = Random.Range(xVelLower * -1, xVelUpper * -1);
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
 
             this.transform.position = new Vector2(xPos, -6);
 
@@ -47,7 +55,8 @@ public class BirdScript : MonoBehaviour
 
     }
 
-    
+
+
 
     void OnMouseOver()
     {
@@ -60,19 +69,33 @@ public class BirdScript : MonoBehaviour
             birdCounterScript.birdsSnapshotted++;
             if(this.gameObject.tag == "Finch")
             {
+                polaroidScript.DisableAllPolaroids();
                 polaroidScript.EnableBullfinchPolaroid();
             } 
             if(this.gameObject.tag == "Magpie")
             {
+                polaroidScript.DisableAllPolaroids();
                 polaroidScript.EnableMagpiePolaroid();
             }
             if(this.gameObject.tag == "Starling")
             {
+                polaroidScript.DisableAllPolaroids();
                 polaroidScript.EnableStarlingPolaroid();
+            }
+
+            if(this.gameObject.tag == "Robin")
+            {
+                polaroidScript.DisableAllPolaroids();
+                polaroidScript.EnableRobinPolaroid();
             }
             birdCounterScript.BirdNumberIncrease();
             //DontDeleteBirdYet();
             Destroy(this.gameObject);
+
+            if(birdCounterScript.birdsSnapshotted > 3)
+            {
+                polaroidScript.EnableVictoryText();
+            }
         }
     }
 
@@ -82,5 +105,6 @@ public class BirdScript : MonoBehaviour
 
     }
 
-    
+
+
 }

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BirdWatching BackGround_0: 63156668130302570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
