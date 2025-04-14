@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StvHFixed_0: -9172659409934342348
+      StvHFixed_1: 1245969266335793128
+      StvHFixed_2: 1937216687337103791
+      StvHFixed_3: 8387575265733089156
+      StvHFixed_4: 6650798994200488328
+      StvHFixed_5: 5074410547582280356
+      StvHFixed_6: -2750753214928108058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

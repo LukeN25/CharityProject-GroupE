@@ -260,7 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5d2ef4bb464b74b838e6d70430f4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdCounterScript: {fileID: 1681146279}
   sceneToLoad: MainMenuScene
 --- !u!4 &82345723
 Transform:
@@ -1805,7 +1804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations! You've gotten a picture of every bird! Press Space to
+  m_text: Congratulations! You've gotten a picture of every bird! Press Escape to
     go back to the Main Menu.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1967,7 +1966,7 @@ MonoBehaviour:
   magpiePolaroid: {fileID: 321043320}
   starlingPolaroid: {fileID: 1683206440}
   robinPolaroid: {fileID: 978973295}
-  victoryText: {fileID: 1588614885}
+  victoryText: {fileID: 0}
 --- !u!1 &1683206440
 GameObject:
   m_ObjectHideFlags: 0
