@@ -6,7 +6,7 @@ public class carSpawner : MonoBehaviour
 
     float TimeToSpawn = 0f;
 
-    public GameObject car;
+    public GameObject[] cars;
 
     public Transform[] spawnPoints;
 
@@ -22,9 +22,12 @@ public class carSpawner : MonoBehaviour
 
     void SpawnCar()
     {
-        int randomArray = Random.Range(0, spawnPoints.Length);
-        Transform spawnPoint = spawnPoints[randomArray];
+        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        Transform spawnPoint = spawnPoints[randomSpawnIndex];
 
-        Instantiate(car, spawnPoint.position, spawnPoint.rotation);
+        int randomCarIndex = Random.Range(0, cars.Length);
+        GameObject selectedCar = cars[randomCarIndex];
+
+        Instantiate(selectedCar, spawnPoint.position, spawnPoint.rotation);
     }
 }

@@ -6,7 +6,7 @@ public class car : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    public float minSpeed = 8f;
+    public float minSpeed = 11f;
     public float maxSpeed = 12f;
 
     float speed = 1f;

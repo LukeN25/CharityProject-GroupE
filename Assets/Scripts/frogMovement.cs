@@ -35,6 +35,7 @@ public class frogMovement : MonoBehaviour
         if(col.tag == "Car")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Score.yourScore = 0;
         }
     }
 

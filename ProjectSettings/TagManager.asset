@@ -8,7 +8,11 @@ TagManager:
   - Magpie
   - Finch
   - Starling
+<<<<<<< Updated upstream
   - Robin
+=======
+  - Car
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

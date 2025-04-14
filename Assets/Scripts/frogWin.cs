@@ -5,7 +5,7 @@ public class frogWin : MonoBehaviour
 {
     void OnTriggerEnter2D()
     {
-        Debug.Log("Win!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Score.yourScore += 1;
     }
 }
