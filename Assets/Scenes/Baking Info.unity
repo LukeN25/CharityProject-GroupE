@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153.01111, y: 452}
+  m_AnchoredPosition: {x: 22.988922, y: 452}
   m_SizeDelta: {x: 790.267, y: 119.358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339119870
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quickdraw Photography
+  m_text: Bake and Cake
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}
@@ -908,7 +908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -161, y: 452}
+  m_AnchoredPosition: {x: 15, y: 452}
   m_SizeDelta: {x: 790.267, y: 119.358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618922816
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quickdraw Photography
+  m_text: Bake and Cake
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}
@@ -1238,7 +1238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: -94}
+  m_AnchoredPosition: {x: -543, y: -94}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862329249
@@ -1261,9 +1261,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Birds will appear on the screen and you job is to click on them to make
-    a photograph of them! Can you snap them all?\n\nRemember:\n\nWhen taking a photo
-    remain calm and take your time with taking a picture. \n\n"
+  m_text: 'WASD Keys to move and E to interact. Pick up either cookie mix or cake
+    mix and mix it in the mixing bowl and bring it to the oven and try to meet each
+    quota in time!
+
+
+    Remember!:
+
+
+    Make sure to keep everything clean when
+    your''e cooking to avoid making a mess.
+
+
+    Follow cooking instructions!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}
