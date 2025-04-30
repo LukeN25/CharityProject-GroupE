@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d92f3d5335e99469924dca3a7c8177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: FarmingMinigame
   scaleFactor: 1.1
 --- !u!114 &1241531610
 MonoBehaviour:
@@ -1284,8 +1284,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284723711
-  m_fontColor: {r: 1, g: 0.69538885, b: 0.38679236, a: 1}
+    rgba: 4278220277
+  m_fontColor: {r: 0.9622642, g: 0.45720434, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d92f3d5335e99469924dca3a7c8177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: MainMenuScene
   scaleFactor: 1.1
 --- !u!114 &2099301825
 MonoBehaviour:
