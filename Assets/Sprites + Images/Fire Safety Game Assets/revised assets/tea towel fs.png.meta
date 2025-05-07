@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tea towel fs_0: 3279086185629666313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

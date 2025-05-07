@@ -62,7 +62,7 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-           takeSnapshot.StartCoroutine(takeSnapshot.TakeSnapshotAndShow());
+           //takeSnapshot.StartCoroutine(takeSnapshot.TakeSnapshotAndShow());
            // StartCoroutine(TakeSnapshotAndShow());
             Debug.Log("Bird clicked");
             Debug.Log("Screenshot should happen");

@@ -10,13 +10,13 @@ public class BirdCounterScript : MonoBehaviour
     void Start()
     {
         birdsSnapshotted = 0;
-        birdCounterText.text = "Birds: " + birdsSnapshotted.ToString() + "/7";
+        birdCounterText.text = "Birds: " + birdsSnapshotted.ToString() + "/4";
 
     }
 
     public void BirdNumberIncrease()
     {
-        birdCounterText.text = birdsSnapshotted.ToString() + "/7";
+        birdCounterText.text = birdsSnapshotted.ToString() + "/4";
     }
 
 }

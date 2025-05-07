@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stove fs bruning_0: 2568896859820654636
+      stove fs bruning_1: -7012730189938687492
+      stove fs bruning_2: -2603360708405608255
+      stove fs bruning_3: 2722731404491082348
+      stove fs bruning_4: 2855744067744960991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

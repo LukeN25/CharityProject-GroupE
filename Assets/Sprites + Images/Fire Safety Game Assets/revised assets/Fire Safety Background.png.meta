@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire Safety Background_0: -1086679621729289618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      socket fs burning_0: -7174323527928862343
+      socket fs burning_1: -7964004529452408772
+      socket fs burning_2: -646204306686750977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

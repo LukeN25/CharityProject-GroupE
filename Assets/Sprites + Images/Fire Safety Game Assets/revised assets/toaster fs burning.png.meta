@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      toaster fs burning_0: -2058018190345527317
+      toaster fs burning_1: -3979857283007640717
+      toaster fs burning_10: -1153045881650455391
+      toaster fs burning_11: -7729695044108268742
+      toaster fs burning_12: -6709675247896631024
+      toaster fs burning_13: 7617237544747661073
+      toaster fs burning_2: -3284622272398900594
+      toaster fs burning_3: -7287275817244845148
+      toaster fs burning_4: 2874960122951898885
+      toaster fs burning_5: -8896933560173118698
+      toaster fs burning_6: 2419230297497599125
+      toaster fs burning_7: 4698057709583756306
+      toaster fs burning_8: -7715156582797736677
+      toaster fs burning_9: 1703289264003913952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
