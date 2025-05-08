@@ -3,9 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class frogMovement : MonoBehaviour
 {
-
     public Rigidbody2D rb;
-
 
     void Update()
     {
@@ -33,9 +31,8 @@ public class frogMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Car")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Score.yourScore = 0;
+        {   
+            SceneManager.LoadScene("GameOverCarScene");
         }
     }
 

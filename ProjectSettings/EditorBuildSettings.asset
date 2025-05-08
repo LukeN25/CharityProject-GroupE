@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/frogger.unity
     guid: 249769176dec8504396cf07927e121e3
   - enabled: 1
+    path: Assets/Scenes/GameOverCarScene.unity
+    guid: 8b532eb9dbb711042bdd49ccf092e7f8
+  - enabled: 1
     path: Assets/Scenes/JamesFireSafetyGame.unity
     guid: a0257625379e50a429a26288e5ad8b38
   - enabled: 1

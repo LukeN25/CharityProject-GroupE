@@ -11,18 +11,15 @@ public class car : MonoBehaviour
 
     float speed = 1f;
 
-
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
+        Destroy(gameObject, 5f);
     }
 
     void FixedUpdate()
     {
         Vector2 forward = new Vector2(transform.right.x, transform.right.y);
-
         rb.MovePosition(rb.position + forward * Time.fixedDeltaTime * speed);
-
-
     }
 }

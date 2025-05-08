@@ -2,14 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Score : MonoBehaviour
+public class scoreEnded : MonoBehaviour
 {
     public static int yourScore = 0;
     public TextMeshProUGUI scoreText;
 
-    void Start()
+    void Update()
     {
-        scoreText.text = yourScore.ToString();
+        scoreText.text = "SCORE: " + yourScore.ToString();
     }
-
 }
