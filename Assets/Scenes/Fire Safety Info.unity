@@ -1380,21 +1380,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your task is to prevent fires from spreading inside a home. Click on the
-    objects to put out fires.
+  m_text: 'Your task is to prevent fires from spreading inside the house. Click on
+    the objects to put out fires.
+
+
+    Hit the arrow keys to check the kitchen and
+    dining room
 
 
     Remember;
 
 
-    When cooking food on a stove
-    make sure to watch over the fire!
-
-
-    Do not leave any fire unattended in the
-    house!
-
-'
+    Never leave a frying pan unattended on a stove!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}
@@ -1421,8 +1418,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.3
-  m_fontSizeBase: 55.3
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

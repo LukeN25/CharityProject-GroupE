@@ -126,85 +126,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tea towel fs burning_0
-      rect:
-        serializedVersion: 2
-        x: 622
-        y: 932
-        width: 19
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9af0818c3aa004900800000000000000
-      internalID: 666544443403800489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_1
-      rect:
-        serializedVersion: 2
-        x: 635
-        y: 885
-        width: 10
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4580cb09ae08bbf10800000000000000
-      internalID: 2286562980759603284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_2
-      rect:
-        serializedVersion: 2
-        x: 1705
-        y: 684
-        width: 446
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e31c45496d238a140800000000000000
-      internalID: 4731087305745678654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tea towel fs burning_3
       rect:
         serializedVersion: 2
-        x: 3
+        x: 97
         y: 242
-        width: 1144
+        width: 969
         height: 632
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,9 +171,9 @@ TextureImporter:
         x: 1174
         y: 242
         width: 986
-        height: 459
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 687
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,143 +186,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_5
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 105
-        width: 6
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2901fff7474e7de0800000000000000
-      internalID: -1333550065092851414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_6
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 68
-        width: 13
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4397eac9fb369890800000000000000
-      internalID: -7451702589400837299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_7
-      rect:
-        serializedVersion: 2
-        x: 1657
-        y: 48
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7befdcaccb046e630800000000000000
-      internalID: 3955920502292086455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_8
-      rect:
-        serializedVersion: 2
-        x: 1658
-        y: 57
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92597cbdce85ce8e0800000000000000
-      internalID: -1662856388083739351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_9
-      rect:
-        serializedVersion: 2
-        x: 568
-        y: 0
-        width: 10
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d385f0e2d1d15ee0800000000000000
-      internalID: -1274006515921615920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tea towel fs burning_10
-      rect:
-        serializedVersion: 2
-        x: 1650
-        y: 0
-        width: 12
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ef42a9979d85ec90800000000000000
-      internalID: -7141145951868923929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 464951296a39fe843afbf08ae4b4be4f
     internalID: 0
     vertices: []
     indices: 

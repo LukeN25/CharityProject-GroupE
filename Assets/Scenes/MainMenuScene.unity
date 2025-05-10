@@ -1609,6 +1609,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2392755553517014502, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5750684017881688829, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1692,6 +1696,42 @@ PrefabInstance:
     - target: {fileID: 5774042819689989081, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
       propertyPath: m_Name
       value: SettingsMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015032792333195269, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.43427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015032792333195269, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.43427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015032792333195269, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015032792333195269, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015032792333195269, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352251012680974315, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
+    - target: {fileID: 6352251012680974315, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352251012680974315, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}
+    - target: {fileID: 6352251012680974315, guid: 95448f95050ec984c9fea73af3bca006, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

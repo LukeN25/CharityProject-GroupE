@@ -482,9 +482,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Birds will appear on the screen and you job is to click on them to make
-    a photograph of them! Can you snap them all?\n\nRemember:\n\nWhen taking a photo
-    remain calm and take your time with taking a picture. \n\n"
+  m_text: "Birds will fly across your eyeline and your job is to click and snap a
+    photo! \nCan you snap them all?\n\nRemember:\n\nAlways respect nature and her
+    creatures, stay calm and keep on snapping! \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}

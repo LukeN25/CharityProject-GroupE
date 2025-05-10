@@ -1261,21 +1261,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WASD Keys to move and E to interact. Pick up either cookie mix or cake
-    mix and mix it in the mixing bowl and bring it to the oven and try to meet each
-    quota in time!
-
-
-    Remember!:
-
-
-    Make sure to keep everything clean when
-    your''e cooking to avoid making a mess.
-
-
-    Follow cooking instructions!
-
-'
+  m_text: "WASD Keys to move and E to interact.\n \nPick up a cookie or cake mix
+    and put in the mixing bowl.\nOnce mixed, it's time to bake!\nDo your best to
+    meet the quota on time!\n\nRemember!:\n\nMake sure to keep everything clean when
+    you're cooking to avoid making a mess.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af6849eb52330444886d9fa621890fd9, type: 2}
   m_sharedMaterial: {fileID: -3354528839103141248, guid: af6849eb52330444886d9fa621890fd9, type: 2}

@@ -4,14 +4,16 @@ using UnityEngine;
 public class FireHazardObject : MonoBehaviour
 {
     public FireHazardManager fireHazardManager;
-    public SpriteRenderer SpriteRenderer;
-    public Animation anim;
+    //public SpriteRenderer SpriteRenderer;
+    public GameObject AnimatedHazard;
+    //public Animation anim;
 
     public int hazardTimerInt;
 
     private void Start()
     {
-        SpriteRenderer.enabled = false;
+        //SpriteRenderer.enabled = false;
+        AnimatedHazard.SetActive(false);
     }
 
     private void Update()
@@ -37,7 +39,8 @@ public class FireHazardObject : MonoBehaviour
         yield return new WaitForSeconds(hazardTimerInt);
         
         //Until we have animations we'll just run this code to turn on the sprite
-        SpriteRenderer.enabled = true;
+        //SpriteRenderer.enabled = true;
+        AnimatedHazard.SetActive(true);
 
         //This is the actual code for playing the hazard animation
         //anim.Play();
