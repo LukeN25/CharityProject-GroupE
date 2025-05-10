@@ -759,8 +759,8 @@ MonoBehaviour:
   seedType: 1
   tile: {fileID: 0}
   mashThreshold: 20
-  potatoSprite: {fileID: 21300000, guid: ff8ea9056371770448e763096f0a203f, type: 3}
-  tomatoSprite: {fileID: 21300000, guid: fe6d7af4c4a7efa449c3739b62a806cf, type: 3}
+  potatoSprite: {fileID: 0}
+  tomatoSprite: {fileID: 0}
   finishedSprite: {fileID: 0}
   progressBar: {fileID: 3955011523210128539}
 --- !u!61 &-1176631585300029097
